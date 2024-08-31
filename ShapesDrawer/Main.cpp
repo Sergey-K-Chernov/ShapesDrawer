@@ -6,7 +6,7 @@
 
 #pragma comment (lib,"Gdiplus.lib")
 
-// ћинимальна€ обв€зка дл€ демонстрации
+// Minimum demo 
 
 HWND createWindow()
 {
@@ -47,7 +47,7 @@ int main()
 	
 	EndPaint(window, &ps);
 	
-	Sleep(2000); // ƒа, мне было лень делать нормальное windows-приложение с обрабочиком сообщений
+	Sleep(2000); // Yes, I was too lazy to write a regular windows application with message processing
 	//for (;;); 
 
 	return 0;
