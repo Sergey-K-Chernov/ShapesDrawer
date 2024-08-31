@@ -7,13 +7,13 @@ class DrawableFrame : public Rectangle, public virtual IDrawable
 {
 public:
 	DrawableFrame(const Ðosition& center, const Size& size);
-	virtual ~DrawableFrame() {}
+	~DrawableFrame() {}
 
-	virtual void draw(const std::unique_ptr<Gdiplus::Graphics>& graphics);
-	virtual bool check(const std::function<bool(const Ðosition& point)>& checker);
+	void draw(const std::unique_ptr<Gdiplus::Graphics>& graphics) override;
+	bool check(const std::function<bool(const Ðosition& point)>& checker) override;
 
-	virtual void setPen(Pen_sp new_pen);
-	virtual void setBrush(Brush_sp new_brush) {}
+	void setPen(Pen_sp new_pen) override;
+	void setBrush(Brush_sp new_brush) override {}
 
 private:
 	Pen_sp pen;
